@@ -81,6 +81,16 @@
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/05/16/BasicUse/">PythonSkills</a>
+    </h1>
+  
+
+      </header>
+    
     <div class="e-content article-entry" itemprop="articleBody">
       
         <h2 id="format"><a href="#format" class="headerlink" title="format"></a>format</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;-&#x27;</span> * <span class="number">10</span>, <span class="string">&quot;introduce:基本语法是通过 &#123;&#125; 和 : 来代替以前的 %&quot;</span>, <span class="string">&#x27;-&#x27;</span> * <span class="number">10</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;*&#x27;</span> * <span class="number">10</span>, <span class="string">&quot;Basic skill&quot;</span>, <span class="string">&#x27;*&#x27;</span> * <span class="number">10</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;==========without designated spot===========&quot;</span>)</span><br><span class="line">str_test0 = <span class="string">&quot;你好&#123;&#125;&#123;&#125;！&quot;</span>.<span class="built_in">format</span>(<span class="string">&#x27;,&#x27;</span>, <span class="string">&#x27;Xingke&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(str_test0)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;==========with designated spot==========&quot;</span>)</span><br><span class="line">str_test1 = <span class="string">&quot;Hello&#123;1&#125;&#123;0&#125;&quot;</span>.<span class="built_in">format</span>(<span class="string">&#x27; Xingke&#x27;</span>, <span class="string">&#x27;!&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(str_test1)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;==========Unzip dictionary parameter==========&quot;</span>)</span><br><span class="line">dict_test1 = &#123;<span class="string">&#x27;name&#x27;</span>: <span class="string">&quot;XingKe&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">16</span>&#125;</span><br><span class="line">str_test2 = <span class="string">&quot;My name is &#123;name&#125;, a &#123;age&#125; boy.&quot;</span>.<span class="built_in">format</span>(**dict_test1)</span><br><span class="line"><span class="built_in">print</span>(str_test2)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;=&#x27;</span> * <span class="number">10</span>, <span class="string">&quot;Secelt list or tuple parameter&quot;</span>, <span class="string">&#x27;=&#x27;</span> * <span class="number">10</span>)</span><br><span class="line">list_test0 = [<span class="string">&quot;you&quot;</span>, <span class="string">&quot;Xingke&quot;</span>]</span><br><span class="line">str_test3 = <span class="string">&quot;&#123;0[0]&#125; name is &#123;0[1]&#125;&quot;</span>.<span class="built_in">format</span>(list_test0)</span><br><span class="line"><span class="built_in">print</span>(str_test3)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;*&#x27;</span> * <span class="number">10</span>, <span class="string">&quot;Special skill&quot;</span>, <span class="string">&#x27;*&#x27;</span> * <span class="number">10</span>)</span><br><span class="line">table_head = [<span class="string">&#x27;id&#x27;</span>, <span class="string">&#x27;name&#x27;</span>, <span class="string">&#x27;age&#x27;</span>]</span><br><span class="line">contents = [[<span class="number">1</span>, <span class="string">&#x27;Xingke&#x27;</span>, <span class="number">18</span>], [<span class="number">2</span>, <span class="string">&#x27;Duanmu&#x27;</span>, <span class="number">19</span>], [<span class="number">3</span>, <span class="string">&#x27;Sima&#x27;</span>, <span class="number">20</span>]]</span><br><span class="line">head = <span class="string">&#x27;&#123;0[0]:^8&#125;&#123;0[1]:^8&#125;&#123;0[2]:^8&#125;&#x27;</span>.<span class="built_in">format</span>(table_head)</span><br><span class="line"><span class="built_in">print</span>(head)</span><br><span class="line"><span class="keyword">for</span> content <span class="keyword">in</span> contents:</span><br><span class="line">    content_test = <span class="string">&quot;&#123;0[0]:^8&#125;&#123;0[1]:^8&#125;&#123;0[2]:^8&#125;&quot;</span>.<span class="built_in">format</span>(content)</span><br><span class="line">    <span class="built_in">print</span>(content_test)</span><br></pre></td></tr></table></figure>
@@ -91,7 +101,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://leopardhacker.github.io/2023/05/16/BasicUse/" data-id="clhp2aiot0000tsi82t3peqb1" data-title="" class="article-share-link">Share</a>
+      <a data-url="https://leopardhacker.github.io/2023/05/16/BasicUse/" data-id="clhp2aiot0000tsi82t3peqb1" data-title="PythonSkills" class="article-share-link">Share</a>
       
       
       
@@ -134,7 +144,7 @@
       <ul>
         
           <li>
-            <a href="/2023/05/16/BasicUse/">(no title)</a>
+            <a href="/2023/05/16/BasicUse/">PythonSkills</a>
           </li>
         
       </ul>
